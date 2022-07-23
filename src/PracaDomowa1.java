@@ -13,10 +13,12 @@ public class PracaDomowa1 {
         int roznica = x-y;
         int iloczyn = x*y;
         int iloraz = x/y;
+        int mod = x % y;
 
         System.out.println("Suma: " + suma);
         System.out.println("Roznica: "+roznica);
         System.out.println("Iloczyn: "+iloczyn);
         System.out.println("Iloraz: "+iloraz);
+        System.out.println("Modulo: "+mod);
     }
 }
