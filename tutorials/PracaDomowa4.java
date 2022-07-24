@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 public class PracaDomowa4 {
 
+
     public static void main(String[] args) {
-        Student[] tablica = new Student[3];
+        int i = 0;
+        int nexte = 1;
+        Student[] tablica = new Student[100];
         Scanner scan = new Scanner(System.in);
-        for(int i=0;i<=2;i++){
+        while(nexte == 1){
             tablica[i] = new Student();
             System.out.println("Podaj imie:");
             tablica[i].imie = scan.nextLine();
@@ -18,11 +21,18 @@ public class PracaDomowa4 {
             System.out.println("Podaj numer indeksu:");
             tablica[i].numerIndeksu =Integer.parseInt(scan.nextLine());
 
+            System.out.println("Czy podajesz nastepnego? [1-tak/2-nie]:");
+            nexte = Integer.parseInt(scan.nextLine());
+
+            if (nexte == 1)
+                i++;
         }
         int k=0;
-        while (k != 5){
+        while (k != 666){
+            System.out.println("Wybierz nr studenta:");
             k = scan.nextInt();
-            if(k>=0 && k<=2){
+            Student.infoUczelnia();
+            if(k>=0 && k<=i){
                 tablica[k].przedstawSie();
                 tablica[k].podajEmail();
                 tablica[k].zalogujSie();
