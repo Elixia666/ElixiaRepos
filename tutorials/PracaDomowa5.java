@@ -21,7 +21,7 @@ public class PracaDomowa5 {
             case "*": {System.out.println("Iloczyn: "+calc.multiplication(x,y));}break;
             case "/": {System.out.println("Iloraz: "+calc.division(x,y));}break;
             case "%": {System.out.println("Mod: "+calc.modulo(x,y));}break;
-
+            default: {} break;
         }
     }
 }
